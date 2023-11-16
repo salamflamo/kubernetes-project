@@ -8,4 +8,4 @@ FROM bitnami/kubectl:latest
 WORKDIR /script
 COPY  --chmod=777 ./script/* /script/
 
-ENTRYPOINT [ "/bin/sh","-c","while true; do echo live; sleep 10;done" ]
+ENTRYPOINT [ "./script/entrypoint.sh" ]
