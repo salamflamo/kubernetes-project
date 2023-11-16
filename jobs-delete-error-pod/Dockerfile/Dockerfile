@@ -7,5 +7,6 @@ FROM bitnami/kubectl:latest
 # RUN ["mkdir","-p","/script"]
 WORKDIR /script
 COPY  --chmod=777 ./script/* /script/
+COPY entrypoint.sh /
 
-ENTRYPOINT [ "./script/entrypoint.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
