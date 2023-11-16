@@ -4,7 +4,7 @@ FROM bitnami/kubectl:latest
   # checkov:skip=CKV_DOCKER_3: regardless for image tag version
   
 
-RUN ["mkdir","-p","/script"]
+# RUN ["mkdir","-p","/script"]
 WORKDIR /script
 COPY  --chmod=777 ./script/* /script/
 
